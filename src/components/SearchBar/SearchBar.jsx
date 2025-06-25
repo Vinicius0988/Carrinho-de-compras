@@ -1,11 +1,8 @@
 import React from "react";
-
-function Header() {
+import { FaSearchDollar } from "react-icons/fa";
+function SearchBar() {
     return (
-        <header className="header" style={{ background: 'red' }}>
-            <div className="container">
-           
-            <form>
+        <form>
                 <input 
                 type="search" 
                 placeholder="Buscar produtos" 
@@ -14,13 +11,10 @@ function Header() {
                 />
 
                 <button type="submit" className="search__button">
-                    icone
+                    <FaSearchDollar />
                 </button>    
             </form>
-
-            </div>
-        </header>
     )
 }
 
-export default Header;
+export  default SearchBar
