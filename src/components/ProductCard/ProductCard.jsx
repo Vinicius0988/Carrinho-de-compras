@@ -1,22 +1,34 @@
 import React from "react";
-
+import propTypes from "prop-types"
+import { BiCartAdd } from "react-icons/bi";
 import './ProductCard.css'
-function ProductCard() {
+
+function ProductCard({ data }) {
+
+    const { title, image, price } = data;
     return(
         <section className="product-card">
             
-        <img src="https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg" alt="product" className="card__image" />
+        <img 
+        src={image} 
+        alt="product" 
+        className="card__image" 
+        />
 
         <div className="card__infos">
-            <h2 className="card__price">R$ 200.20</h2>
-            <h2 className="card__title">manual do dev</h2>
+            <h2 className="card__price">{price}</h2>
+            <h2 className="card__title">{title}</h2>
         </div>
 
         <button type="button" className="button__add-cart">
-            kd o icon?
+            <BiCartAdd />
         </button>
         </section>
     )
 }
 
 export default ProductCard;
+
+ProductCard.propTypes = {
+    data: propTypes.shape({}),
+}.isRequired;
