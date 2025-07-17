@@ -1,13 +1,16 @@
 import React from "react";
 import Header from "./components/Header/Header";
 import Products from './components/Products/Products'
+import Provaider from "./Context/Provider";
+import Cart from "./components/Cart/Cart";
 
 function App() {
   return (
-    <div>
+    <Provaider>
       <Header />
       <Products />
-    </div>
+      <Cart />
+    </Provaider>
   );
 }
 

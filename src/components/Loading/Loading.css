@@ -1,0 +1,26 @@
+.loading-overlay {
+  position: fixed;       /* fixa na tela toda */
+  top: 0;
+  left: 0;
+  width: 100vw;          /* largura total da tela */
+  height: 100vh;         /* altura total da tela */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7); /* fundo branco semi-transparente */
+  z-index: 9999;         /* fica em cima de tudo */
+}
+
+.icon__rotate {
+  font-size: 60px;       /* maior para destacar */
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

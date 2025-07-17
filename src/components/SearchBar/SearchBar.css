@@ -1,6 +1,6 @@
 .search-bar {
     display: flex;
-    background-color: rgb(145, 191, 231);
+    background-color: #F5F5F5;
     width: 100%;
     max-width: 500px;
     justify-content: space-between;
