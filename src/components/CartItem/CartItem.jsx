@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaCircleXmark } from "react-icons/fa6";
 import propTypes from "prop-types";
 import "./CartItem.css"
 import formatCurrency from "../../utils/formatCurrency";
+import AppContext from "../../Context/AppContext";
 
 function CartItem ( { data} ) {
+    const { cartItems, setCartItems } = useContext(AppContext)
+    const { id, title, image, price } = data;
 
-    const { title, image, price } = data;
+    const handleRemoveItem = () => {
+        const updatedItems = cartItems.filter((item) => item.id !== id)
+        setCartItems(updatedItems);
+    }
 
     return (
         <section className="Cart-item">
@@ -23,6 +29,7 @@ function CartItem ( { data} ) {
                 <button 
                 type="button"
                 className="Button__remove-item"
+                onClick={ handleRemoveItem }
                 >
                 <FaCircleXmark />
                 </button>
