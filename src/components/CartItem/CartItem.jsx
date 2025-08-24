@@ -10,8 +10,12 @@ function CartItem ( { data} ) {
     const { id, title, image, price } = data;
 
     const handleRemoveItem = () => {
-        const updatedItems = cartItems.filter((item) => item.id !== id)
-        setCartItems(updatedItems);
+        const itemIndex = cartItems.findIndex((item) => item.id === id);
+        if (itemIndex !== -1) {
+            const updatedItems = [...cartItems];
+            updatedItems.splice(itemIndex, 1);
+            setCartItems(updatedItems);
+        }
     }
 
     return (
