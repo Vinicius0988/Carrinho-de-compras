@@ -1,39 +1,50 @@
 .Cart-item {
-    display: flex;
-    align-items: flex-start;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    position: relative;
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid #cce0cc; /* verde claro em vez de cinza */
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  position: relative;
 }
 
 .Cart-item-image {
-    width: 70px;
+  width: 70px;
+  border-radius: 5px;
+  background-color: #f0fff4; /* verde muito claro como plano de fundo */
+  padding: 5px;
 }
 
 .Cart-item-title {
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: rgba(0, 0, 0, 0.5);
-    margin-bottom: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(0, 80, 0, 0.6); /* tom esverdeado */
+  margin-bottom: 8px;
 }
 
 .Cart-item-price {
-    font-size: 25px;
-    font-weight: 500;
+  font-size: 25px;
+  font-weight: 500;
+  color: #006400; /* verde escuro para preço */
 }
 
 .Cart-item-content {
-    padding: 0 35px 0 10px;
+  padding: 0 35px 0 10px;
 }
 
 .Button__remove-item {
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: #d83232;
-    bottom: none;
-    background: none;
-    border: none;
-    cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #ffffff;
+  background-color: #228B22;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.Button__remove-item:hover {
+  background-color: #006400;
 }

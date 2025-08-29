@@ -1,35 +1,61 @@
 .Cart {
-    width: 100%;
-    max-width: 330px;
-    background-color: rgb(255, 255, 255);
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding: 100px 20px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transform: translate(110%, 0);
-    transition: all 400ms ease;
+  width: 100%;
+  max-width: 330px;
+  background: linear-gradient(to bottom, #a8d5a8, #d4f2d4); /* verde claro suave */
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 100px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translate(110%, 0);
+  transition: all 400ms ease;
+  color: #155724; /* verde escuro para texto */
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  border-left: 2px solid #7cc77c; /* borda verde média */
 }
 
 .Cart-items {
-    flex-grow: 1;
-    overflow: auto;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* Scrollbar customizada para Webkit (Chrome, Edge, Safari) */
+.Cart-items::-webkit-scrollbar {
+  width: 8px;
+}
+
+.Cart-items::-webkit-scrollbar-track {
+  background: #d4f2d4; /* fundo da track mais claro */
+  border-radius: 10px;
+}
+
+.Cart-items::-webkit-scrollbar-thumb {
+  background-color: #7cc77c; /* verde médio para thumb */
+  border-radius: 10px;
+  border: 2px solid #d4f2d4; /* espaçamento */
+}
+
+/* Scrollbar para Firefox */
+.Cart-items {
+  scrollbar-width: thin;
+  scrollbar-color: #7cc77c #d4f2d4;
 }
 
 .Cart-resume {
-    font-size: 1.8rem;
-    font-weight: 500;
-    padding: 35px 0 15px;
-    border-top: 1px solid #ddd;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 35px 0 15px;
+  border-top: 1px solid rgba(21, 87, 36, 0.3); /* verde escuro translúcido */
 }
 
 .Cart-items .Cart-item:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .Cart-active {
-    transform: translate(0, 0);
+  transform: translate(0, 0);
 }

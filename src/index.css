@@ -8,7 +8,8 @@
 }
 
 body {
-  background-color: #ebebeb;
+  background: linear-gradient(to bottom,#56ab2f, #a8e6cf);
+  color: #ffffff;
 }
 
 .container {
